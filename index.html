@@ -6,9 +6,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
-    <header></header>
-    <section></section>
-    <footer></footer>
+<body class="bg-[url('./img/istockphoto.jpg')] bg-no-repeat bg-cover flex flex-col min-h-screen ">
+    <header>
+        <h1>ToDo List</h1>
+        <form id="new-task-form">
+            <input 
+                type="text" 
+                id="new-task-input" 
+                placeholder="Create new task">
+            <input 
+                type="submit" 
+                id="new-task-submit" 
+                value="Add task">
+        </form>
+    </header>
+    <main>
+        <section> 
+            <h2>Tasks</h2>
+            <div id="tasks">
+
+            </div>
+            <div id="action-buttons">
+
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
