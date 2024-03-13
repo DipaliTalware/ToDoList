@@ -6,25 +6,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="bg-[url('./img/istockphoto.jpg')] bg-no-repeat bg-cover flex flex-col min-h-screen ">
-    <header>
-        <h1>ToDo List</h1>
-        <form id="new-task-form">
-            <input 
+<body class="bg-[url('./img/istockphoto.jpg')] bg-no-repeat bg-cover flex flex-col min-h-full">
+    <header class=" max-w-[800px] w-full m-auto mt-16">
+        <h1 class="text-3xl">ToDo List</h1>
+        <form id="new-task-form" class="flex">
+            <input class="size-1/2 p-4 rounded-2xl text-xl mr-4 mt-4"
                 type="text" 
                 id="new-task-input" 
-                placeholder="Create new task">
+                placeholder="Create new task"
+            />
             <input 
+            class="cursor-pointer text-xl rounded-xl bg-pink-200 p-4 mt-4"
                 type="submit" 
                 id="new-task-submit" 
-                value="Add task">
+                value="Add task"
+            />
         </form>
     </header>
     <main>
-        <section> 
-            <h2>Tasks</h2>
+        <section class="max-w-[800px] w-full m-auto"> 
+            <h2 class="text-2xl mt-6">Tasks</h2>
             <div id="tasks">
-
+                <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text" 
+                            class="text flex-1 p-4 rounded-2xl text-xl mr-4 mt-4 size-1/2" 
+                            value="my first tasks"
+                            readonly
+                        />
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                        <button class="share">Share</button>
+                    </div>
+                </div>
             </div>
             <div id="action-buttons">
 
