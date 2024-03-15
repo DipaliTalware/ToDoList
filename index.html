@@ -3,51 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>ToDo List</title>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
 </head>
-<body class="bg-[url('./img/istockphoto.jpg')] bg-no-repeat bg-cover flex flex-col min-h-full">
-    <header class=" max-w-[800px] w-full m-auto mt-16">
-        <h1 class="text-3xl">ToDo List</h1>
-        <form id="new-task-form" class="flex">
-            <input class="size-1/2 p-4 rounded-2xl text-xl mr-4 mt-4"
-                type="text" 
-                id="new-task-input" 
-                placeholder="Create new task"
-            />
-            <input 
-            class="cursor-pointer text-xl rounded-xl bg-pink-200 p-4 mt-4"
-                type="submit" 
-                id="new-task-submit" 
-                value="Add task"
-            />
-        </form>
-    </header>
-    <main>
-        <section class="max-w-[800px] w-full m-auto"> 
-            <h2 class="text-2xl mt-6">Tasks</h2>
+<body class="bg-[url('./img/istockphoto.jpg')] bg-no-repeat bg-cover flex flex-col min-h-screen">
+    <div class="max-w-4xl w-full mx-auto mt-8 sm:mt-16 p-4 sm:p-6 rounded-lg shadow-lg bg-white border border-black">
+        <header>
+            <h1 class="text-2xl sm:text-3xl text-center mb-4 font-bold">ToDo List</h1>
+            <form id="new-task-form" class="flex flex-wrap justify-between items-center">
+                <input class="flex-grow p-3 sm:p-4 rounded-2xl text-lg sm:text-xl mr-2 sm:mr-4"
+                    type="text" 
+                    id="new-task-input" 
+                    placeholder="Create new task"
+                />
+                <input 
+                class="cursor-pointer text-lg sm:text-xl rounded-xl bg-blue-300 hover:bg-blue-400 text-white p-3 sm:p-4 "
+                    type="submit" 
+                    id="new-task-submit" 
+                    value="Add task"
+                />
+            </form>
+        </header>
+        <main>
+            <h2 class="text-xl sm:text-2xl font-semibold mt-6 mb-4 text-center text-gray-800">Tasks</h2>
             <div id="tasks">
-                <div class="task">
-                    <div class="content">
+                <div class="task flex flex-col sm:flex-row justify-between items-center mb-4">
+                    <div class="content flex-grow">
                         <input 
                             type="text" 
-                            class="text flex-1 p-4 rounded-2xl text-xl mr-4 mt-4 size-1/2" 
+                            class="text w-full p-3 sm:p-4 rounded-2xl text-lg sm:text-xl mb-2 sm:mb-0 sm:mr-4" 
                             value="my first tasks"
                             readonly
                         />
                     </div>
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                        <button class="share">Share</button>
+                    <div class="actions flex justify-center ms-2">
+                        <button class="edit bg-blue-200 hover:bg-blue-300 text-black font-bold py-2 px-4 rounded-l">Edit</button>
+                        <button class="delete bg-green-200 hover:bg-green-300 text-black font-bold py-2 px-4">Delete</button>
+                        <button class="share bg-purple-200 hover:bg-purple-300 text-black font-bold py-2 px-4 rounded-r">Share</button>
                     </div>
                 </div>
             </div>
             <div id="action-buttons">
 
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
